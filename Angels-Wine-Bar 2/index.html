@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angel's Wine Bar | Luxury Wine Experience in Bangkok</title>
+<meta name="description" content="Angel's Wine Bar — elegant wine tasting lounge in Bangkok offering curated wines, live music, and personalized experiences.">
+<link rel="icon" href="assets/favicon.ico">
+<style>
+:root{
+  --midnight:#0b0d18;
+  --white:#f7f8fc;
+  --gold:#e0c879;
+  --accent:#8a2432;
+  --glass:rgba(255,255,255,0.08);
+  --radius:16px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--white);
+  background:var(--midnight);
+  overflow-x:hidden;
+}
+a{color:var(--gold);text-decoration:none;}
+nav{
+  position:fixed;top:0;width:100%;z-index:100;
+  background:rgba(11,13,24,0.85);
+  backdrop-filter:blur(8px);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 40px;border-bottom:1px solid rgba(224,200,121,0.3);
+}
+nav h1{font-size:20px;letter-spacing:2px;text-transform:uppercase;margin:0}
+nav h1 span{color:var(--gold)}
+.nav-links a{margin:0 12px;font-weight:500}
+.nav-links a:hover{color:#fff}
+
+header{
+  position:relative;
+  height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;overflow:hidden;
+}
+header video{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;filter:brightness(0.5) contrast(1.08);
+}
+header .overlay{
+  position:relative;z-index:2;max-width:820px;padding:20px;
+}
+header h2{
+  font-size:56px;line-height:1.1;margin-bottom:16px;
+  color:var(--gold);text-shadow:0 3px 15px rgba(0,0,0,0.6);
+}
+header p{font-size:18px;max-width:720px;margin:0 auto 24px;color:#e0e3ec}
+.btn{
+  display:inline-block;background:linear-gradient(180deg,#f7f3d6,var(--gold));
+  color:#141418;padding:12px 22px;border-radius:50px;font-weight:600;
+  transition:0.3s;box-shadow:0 4px 15px rgba(224,200,121,0.3);
+}
+.btn:hover{transform:translateY(-3px);}
+section{padding:100px 10%;border-top:1px solid rgba(255,255,255,0.08)}
+section h3{color:var(--gold);font-size:28px;text-transform:uppercase;letter-spacing:3px;text-align:center;margin-bottom:30px;}
+.about p{max-width:900px;margin:auto;text-align:center;color:#cfd2dc;line-height:1.8;font-size:17px;}
+.wine-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px;}
+.card{
+  background:rgba(255,255,255,0.06);border:1px solid rgba(224,200,121,0.2);
+  border-radius:var(--radius);padding:20px;box-shadow:0 6px 25px rgba(0,0,0,0.35);
+}
+.card h4{margin:0;color:var(--gold);}
+.card p{color:#d6d8df;font-size:15px;}
+.events ul{list-style:none;padding:0;text-align:center;}
+.events li{margin:10px 0;color:#d0d3da;font-size:18px;}
+form{
+  max-width:600px;margin:auto;display:grid;gap:16px;
+  background:rgba(255,255,255,0.05);padding:30px;border-radius:var(--radius);
+  border:1px solid rgba(224,200,121,0.2);
+}
+label{font-size:14px;color:#ccc}
+input,select,textarea{
+  width:100%;padding:12px;border-radius:10px;border:none;
+  background:rgba(255,255,255,0.1);color:#fff;
+}
+input:focus,textarea:focus{outline:2px solid var(--gold);}
+footer{
+  text-align:center;padding:30px 0;color:#bbb;font-size:14px;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+.reveal{opacity:0;transform:translateY(30px);transition:1s all ease;}
+.reveal.on{opacity:1;transform:none;}
+/* simple nav logo */
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:40px;height:40px;border-radius:8px;object-fit:cover}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <img src="assets/logo.png" alt="Angel's Wine Bar Logo"/>
+    <h1>Angel's <span>Wine Bar</span></h1>
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#wines">Wines</a>
+    <a href="#events">Events</a>
+    <a href="#reserve">Reserve</a>
+  </div>
+</nav>
+
+<header>
+  <video autoplay muted loop playsinline preload="auto">
+    <source src="assets/wine-bar-video.mp4" type="video/mp4">
+  </video>
+  <div class="overlay">
+    <h2>Luxury Wine Experience in Bangkok</h2>
+    <p>Discover Angel’s Wine Bar — where fine wines, elegance, and ambiance blend into unforgettable nights.</p>
+    <a href="#reserve" class="btn">Reserve Your Table</a>
+  </div>
+</header>
+
+<section id="about" class="about reveal">
+  <h3>About Us</h3>
+  <p>
+    Angel’s Wine Bar offers a refined escape for wine enthusiasts in Bangkok, Thailand. 
+    Our cellar features carefully curated bottles from around the world, each telling a story of craftsmanship and terroir. 
+    Whether you’re enjoying an intimate evening or a group tasting, every detail — from lighting to music — is designed to indulge your senses.
+  </p>
+</section>
+
+<section id="wines" class="reveal">
+  <h3>Signature Wines</h3>
+  <div class="wine-list">
+    <div class="card">
+      <h4>Pinot Noir “Evening Silk” — 2020</h4>
+      <p>Elegant cherry aroma, soft tannins, long finish. Perfect with duck or mushroom risotto.</p>
+    </div>
+    <div class="card">
+      <h4>Chardonnay “Sea Breeze” — 2019</h4>
+      <p>Fresh citrus, buttery oak, and creamy texture. Complements seafood and creamy pastas.</p>
+    </div>
+    <div class="card">
+      <h4>Malbec “Midnight Steps” — 2021</h4>
+      <p>Bold plum and chocolate tones with silky body. Ideal with steak or dark chocolate desserts.</p>
+    </div>
+  </div>
+</section>
+
+<section id="events" class="events reveal">
+  <h3>Events & Experiences</h3>
+  <ul>
+    <li>🎷 Live Jazz Nights — Every Friday & Saturday, 8:30 PM</li>
+    <li>🍇 Sommelier Wine Tasting — Monthly Masterclass</li>
+    <li>🥂 Private Cellar Bookings — Available on Request</li>
+  </ul>
+</section>
+
+<section id="reserve" class="reveal">
+  <h3>Reserve Your Table</h3>
+  <form id="bookingForm">
+    <label>Full Name</label>
+    <input type="text" id="name" required placeholder="Your Name">
+
+    <label>Date</label>
+    <input type="date" id="date" required>
+
+    <label>Time</label>
+    <input type="time" id="time" required>
+
+    <label>Guests</label>
+    <select id="guests" required>
+      <option value="">Select guests</option>
+      <option>1</option><option>2</option><option>3</option><option>4+</option>
+    </select>
+
+    <label>Special Notes</label>
+    <textarea id="notes" rows="3" placeholder="Allergies, celebration details, etc."></textarea>
+
+    <button type="submit" class="btn">Confirm Reservation</button>
+  </form>
+</section>
+
+<footer>
+  <p>📍 Bangkok, Thailand | 📞 +66 6502 92911 | ✉️ angeldj1103@gmail.com</p>
+  <p>© <span id="year"></span> Angel’s Wine Bar — Crafted with Passion & Elegance</p>
+</footer>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('on');});
+},{threshold:0.2});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// Year
+document.getElementById('year').textContent=new Date().getFullYear();
+
+// Booking form
+document.getElementById('bookingForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  alert(`Thank you ${name}! Your reservation request has been received. We will contact you shortly via email.`);
+  e.target.reset();
+});
+</script>
+</body>
+</html>
